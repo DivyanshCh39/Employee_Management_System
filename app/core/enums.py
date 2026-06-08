@@ -1,0 +1,44 @@
+from enum import Enum
+
+
+class Role(str, Enum):
+    ADMIN = "ADMIN"
+    HR = "HR"
+    MANAGER = "MANAGER"
+    EMPLOYEE = "EMPLOYEE"
+
+
+class LeaveType(str, Enum):
+    SICK = "SICK"
+    CASUAL = "CASUAL"
+    EARNED = "EARNED"
+    UNPAID = "UNPAID"
+
+
+class LeaveStatus(str, Enum):
+    PENDING = "PENDING"
+    APPROVED = "APPROVED"
+    REJECTED = "REJECTED"
+    CANCELLED = "CANCELLED"
+
+
+class AuditAction(str, Enum):
+    # Employee actions
+    EMPLOYEE_CREATED = "EMPLOYEE_CREATED"
+    EMPLOYEE_UPDATED = "EMPLOYEE_UPDATED"
+    EMPLOYEE_DELETED = "EMPLOYEE_DELETED"
+
+    # Department actions
+    DEPARTMENT_CREATED = "DEPARTMENT_CREATED"
+    DEPARTMENT_UPDATED = "DEPARTMENT_UPDATED"
+    DEPARTMENT_DELETED = "DEPARTMENT_DELETED"
+
+    # Leave actions
+    LEAVE_APPLIED = "LEAVE_APPLIED"
+    LEAVE_APPROVED = "LEAVE_APPROVED"
+    LEAVE_REJECTED = "LEAVE_REJECTED"
+    LEAVE_CANCELLED = "LEAVE_CANCELLED"
+
+    # Auth actions
+    USER_LOGIN = "USER_LOGIN"
+    USER_LOGOUT = "USER_LOGOUT"
